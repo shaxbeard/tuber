@@ -1,0 +1,11 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+.left-nav-controls {
+  display: flex;
+}
+
+/* body {
+    background: orange;
+  } */
