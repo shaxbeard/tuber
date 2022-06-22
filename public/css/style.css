@@ -1,11 +1,35 @@
 .nav-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+.navbar-brand {
+  font-size: 2.25rem;
+  color: #198754;
+}
+.navbar-brand:hover {
+  color: green;
 }
 .left-nav-controls {
   display: flex;
+  align-items: center;
+  padding: 20px;
 }
-
-/* body {
-    background: orange;
-  } */
+.right-nav-controls {
+  padding: 20px;
+}
+.nav-form-buttons-container {
+  margin-left: 60px;
+}
+.nav-form-buttons-container form {
+  width: 400px;
+}
+.right-nav-controls a {
+  box-shadow: 0px 0px 8px rgb(0 0 0 / 10%), 0px 4px 4px rgb(0 0 0 / 4%);
+  border-radius: 500px;
+}
+a.btn.signup-button {
+  background: #000;
+  color: #fff;
+}
