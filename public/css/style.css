@@ -1,3 +1,4 @@
+/* MAIN NAVBAR SECTION */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -33,3 +34,16 @@ a.btn.signup-button {
   background: #000;
   color: #fff;
 }
+
+/* VENDORS AND MAP PAGE */
+div.col-6.map img {
+  max-width: 100%;
+}
+
+/* @media (min-width: 1200px) .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+  max-width: 100%;
+} */
