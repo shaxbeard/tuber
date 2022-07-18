@@ -1,6 +1,5 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
-const Vendor = require("../models/Vendor");
 
 module.exports = {
   getProfile: async (req, res) => {
@@ -15,14 +14,6 @@ module.exports = {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
       res.render("feed.ejs", { posts: posts });
-    } catch (err) {
-      console.log(err);
-    }
-  },
-  getVendors: async (req, res) => {
-    try {
-      const vendors = await Vendor.find().lean();
-      res.render("vendors.ejs", { vendors: vendors });
     } catch (err) {
       console.log(err);
     }
