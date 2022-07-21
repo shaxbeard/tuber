@@ -7,6 +7,7 @@
     <ul class="row list-unstyled">
       <% for(var i=0; i<vendors.length; i++) {%>
         <div class="card" style="width: 18rem;">
+          <a href="/vendor/<%= vendors[i]._id%>">
           <img class="card-img-top" src="<%= vendors[i].imagePath%>" alt="Card image cap">
           </a>
           <div class="card-body">
