@@ -1,9 +1,21 @@
 <%- include('partials/header') -%>
 <div class="container">
   <div class="row justify-content-center mt-5">
-    <div class="col-6">
+    <div>
       <h2><%= vendor.name %></h2>
       <p><%= vendor.location %></p>
+      <ul class="row list-unstyled">
+        <% for(var i=0; i<products.length; i++) {%>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<%= products[i].imagePath%>" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title"><%= products[i].name%></h5>
+              <h5 class="card-title"><%= products[i].price%></h5>
+            </div>
+          </div>
+        <% } %>
+        </ul>  
 
       <div class="row justify-content-between"></div>
     </div>
