@@ -6,6 +6,7 @@
       <p><%= vendor.location %></p>
       <ul class="row list-unstyled">
         <% for(var i=0; i<products.length; i++) {%>
+          <%if(products[i].vendor_id == vendor._id){ %>
           <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="<%= products[i].imagePath%>" alt="Card image cap">
             </a>
@@ -14,6 +15,7 @@
               <h5 class="card-title"><%= products[i].price%></h5>
             </div>
           </div>
+          <%}%>
         <% } %>
         </ul>  
 
