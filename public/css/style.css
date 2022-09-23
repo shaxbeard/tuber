@@ -47,3 +47,41 @@ div.col-6.map img {
   .container-xl {
   max-width: 100%;
 } */
+
+main.container {
+  height: 100vh;
+  /* width: 100%; */
+  /* margin: 0; */
+  max-width: 100%;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://res.cloudinary.com/dewbhwqgu/image/upload/v1663899024/strawberry-garden_qswbi9.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  left: 6%;
+  position: absolute;
+  color: white;
+  top: 20%;
+  font-size: 80px;
+}
+
+/* .hero-text {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://res.cloudinary.com/dewbhwqgu/image/upload/v1663899024/strawberry-garden_qswbi9.jpg);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+} */
