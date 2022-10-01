@@ -1,4 +1,5 @@
 const Vendor = require("../models/Vendor");
+const Product = require("../models/Product");
 
 module.exports = {
   getVendors: async (req, res) => {
@@ -12,7 +13,9 @@ module.exports = {
   getVendor: async (req, res) => {
     try {
       const vendor = await Vendor.findById(req.params.id);
-      res.render("vendor.ejs", { vendor: vendor });
+      const products = await Product.find().lean();
+      console.log(products);
+      res.render("vendor.ejs", { vendor: vendor, products: products });
     } catch (err) {
       console.log(err);
     }
