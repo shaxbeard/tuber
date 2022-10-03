@@ -6,13 +6,15 @@
       <p><%= vendor.location %></p>
       <ul class="row list-unstyled">
         <% for(var i=0; i<products.length; i++) {%>
-          <%if(products[i].vendor_id == vendor._id){ %>
-          <div class="card" style="width: 18rem;">
+          <%if(products[i].vendor_id.includes(String(vendor._id))){ %>
+            <div class="card" style="width: 18rem;">
+              <a href="/vendor/add-to-cart/<%= products[i]._id%>">
             <img class="card-img-top" src="<%= products[i].imagePath%>" alt="Card image cap">
             </a>
             <div class="card-body">
               <h5 class="card-title"><%= products[i].name%></h5>
               <h5 class="card-title"><%= products[i].price%></h5>
+            </a>
             </div>
           </div>
           <%}%>
