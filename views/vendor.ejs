@@ -8,7 +8,8 @@
         <% for(var i=0; i<products.length; i++) {%>
           <%if(products[i].vendor_id.includes(String(vendor._id))){ %>
             <div class="card" style="width: 18rem;">
-              <a href="/vendor/add-to-cart/<%= products[i]._id%>">
+              <a href="/vendor/add-to-cart/<%= products[i]._id%>-<%= String(vendor._id)%>">
+              <!-- <a href="/vendor/add-to-cart?id=<%= products[i]._id%>"> -->
             <img class="card-img-top" src="<%= products[i].imagePath%>" alt="Card image cap">
             </a>
             <div class="card-body">

@@ -1,7 +1,9 @@
 module.exports = function Cart(oldCart) {
-  this.items = oldCart.items;
-  this.totalQty = oldCart.totalQty;
-  this.totalPrice = oldCart.totalPrice;
+  //Wait - I also need to store the Vendor ID in the cart somewhere too
+  //Max's demo was for a single vendor - so he didn't need to have a vendor ID anywhere
+  this.items = oldCart.items || {};
+  this.totalQty = oldCart.totalQty || 0;
+  this.totalPrice = oldCart.totalPrice || 0;
 
   this.add = function (item, id) {
     let storedItem = this.items[id];
@@ -11,7 +13,7 @@ module.exports = function Cart(oldCart) {
     storedItem.qty++;
     storedItem.price = storedItem.item.price * storedItem.qty;
     this.totalQty++;
-    this.totalPrice += storedItem.price;
+    this.totalPrice += storedItem.item.price;
   };
 
   this.generateArray = function () {

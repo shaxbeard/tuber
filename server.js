@@ -54,6 +54,12 @@ app.use(passport.session());
 //Use flash messages for errors, info, ect...
 app.use(flash());
 
+//Make the sessions in this function GLOBAL - available to all of the views
+app.use(function (req, res, next) {
+  res.locals.session = req.session;
+  next();
+});
+
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
 app.use("/post", postRoutes);

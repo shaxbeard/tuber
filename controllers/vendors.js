@@ -14,8 +14,7 @@ module.exports = {
     try {
       const vendor = await Vendor.findById(req.params.id);
       const products = await Product.find().lean();
-      console.log(products);
-      console.log(vendor);
+      // console.log(vendor);
       res.render("vendor.ejs", { vendor: vendor, products: products });
     } catch (err) {
       console.log(err);
