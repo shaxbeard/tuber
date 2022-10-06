@@ -4,6 +4,8 @@ const authController = require("../controllers/auth");
 const homeController = require("../controllers/home");
 const postsController = require("../controllers/posts");
 const vendorsController = require("../controllers/vendors");
+const Cart = require("../models/cart");
+
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes - simplified for now
@@ -16,5 +18,18 @@ router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
+
+router.get("/shopping-cart", function (req, res, next) {
+  if (!req.session.cart) {
+    console.log("cart in session object");
+    return res.render("shopping-cart.ejs", { products: null });
+  }
+  console.log("yes there is req.session.cart");
+  let cart = new Cart(req.session.cart);
+  res.render("shopping-cart.ejs", {
+    products: cart.generateArray(),
+    totalPrice: cart.totalPrice,
+  });
+});
 
 module.exports = router;

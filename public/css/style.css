@@ -98,3 +98,6 @@ main.container {
   width: 150px;
   margin: 5px 10px 5px 0;
 }
+.cart-counter {
+  color: black;
+}
