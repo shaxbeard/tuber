@@ -1,3 +1,49 @@
+/* GlOBAL SECTION */
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/* HOMEPAGE SECTION */
+
+.homepage header {
+  z-index: 3;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.homepage .container {
+  padding: 0;
+  height: calc(100vh - 104px);
+}
+
+main.container {
+  /* height: 100vh; */
+  /* width: 100%; */
+  /* margin: 0; */
+  max-width: 100%;
+}
+
+.hero-image {
+  margin-top: 104px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://res.cloudinary.com/dewbhwqgu/image/upload/v1663899024/strawberry-garden_qswbi9.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  left: 3%;
+  position: absolute;
+  color: white;
+  top: 31%;
+  font-size: 80px;
+}
+
 /* MAIN NAVBAR SECTION */
 .nav-container {
   display: flex;
@@ -7,7 +53,7 @@
 }
 .navbar-brand {
   font-size: 2.25rem;
-  color: #198754;
+  color: #00a36c;
 }
 .navbar-brand:hover {
   color: green;
@@ -31,60 +77,30 @@
   border-radius: 500px;
 }
 a.btn.signup-button {
-  background: #000;
+  background: #00a36c;
   color: #fff;
 }
 
 /* VENDORS AND MAP PAGE */
-div.col-6.map img {
+.vendors-map img {
   max-width: 100%;
 }
-
-/* @media (min-width: 1200px) .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl {
-  max-width: 100%;
-} */
-
-main.container {
-  height: 100vh;
-  /* width: 100%; */
-  /* margin: 0; */
-  max-width: 100%;
+.vendors.flex-container {
+  display: flex;
 }
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://res.cloudinary.com/dewbhwqgu/image/upload/v1663899024/strawberry-garden_qswbi9.jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+.vendor-cards.flex-container {
+  display: flex;
+  flex-flow: row wrap;
 }
-
-.hero-text {
-  left: 3%;
-  position: absolute;
-  color: white;
-  top: 31%;
-  font-size: 80px;
+.box1 {
+  flex: 1 1 50%;
 }
-
-/* .hero-text {
-  width: 100%;
-  height: 100%;
-  background-image: url(https://res.cloudinary.com/dewbhwqgu/image/upload/v1663899024/strawberry-garden_qswbi9.jpg);
-  background-attachment: fixed;
-  margin: 0;
-  padding: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-} */
+.box2 {
+  flex: 1 1 50%;
+}
+.card {
+  margin: 15px;
+}
 
 /* FOOTER SECTION */
 .footer-container {
@@ -100,4 +116,15 @@ main.container {
 }
 .cart-counter {
   color: black;
+}
+.signup button,
+.login button {
+  width: 100%;
+  background-color: #00a36c;
+  border-color: #00a36c;
+}
+.signup button:hover,
+.login button:hover {
+  background-color: #00a36c;
+  border-color: #00a36c;
 }
