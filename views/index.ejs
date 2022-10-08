@@ -1,4 +1,3 @@
-<!-- <%- include('partials/header') -%> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,38 +21,26 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <nav class="nav-container bg-light">
-      <div class="left-nav-controls">
-        <a class="navbar-brand" href="#"
-          >Tuber <i class="fas fa-seedling"></i
-        ></a>
-
-        <div class="nav-form-buttons-container">
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+  <body class="homepage">
+    <header>
+      <nav class="nav-container bg-light">
+        <div class="left-nav-controls">
+          <a class="navbar-brand" href="#"
+            >Tuber <i class="fas fa-seedling"></i
+          ></a>
         </div>
-      </div>
-      <div class="right-nav-controls">
-        <%if(user){ %>
-        <a type="button" href="/logout" class="btn login-button">Logout</a>
-        <%}%> <%if(!user){ %>
-        <a type="button" class="btn login-button" href="/login"
-          ><i class="fas fa-user"></i> Log in</a
-        >
-        <a type="button" class="btn signup-button" href="/signup">Sign up</a>
-        <%}%>
-      </div>
-    </nav>
+        <div class="right-nav-controls">
+          <%if(user){ %>
+          <a type="button" href="/logout" class="btn login-button">Logout</a>
+          <%}%> <%if(!user){ %>
+          <a type="button" class="btn login-button" href="/login"
+            ><i class="fas fa-user"></i> Log in</a
+          >
+          <a type="button" class="btn signup-button" href="/signup">Sign up</a>
+          <%}%>
+        </div>
+      </nav>
+    </header>
     <main class="container">
       <div class="hero-image">
         <div class="hero-text">It's Uber for gardens</div>
