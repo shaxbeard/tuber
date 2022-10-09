@@ -139,8 +139,12 @@ span.hours-of-operation {
 
 /* SHOPPING CART PAGE */
 .card.shopping-cart {
-  margin: 0 auto;
+  margin: 100px auto;
 }
 .card.shopping-cart button {
   width: 100%;
+  border-radius: 500px;
+  background-color: #00a36c;
+  border-color: #00a36c;
+  color: #fff;
 }
