@@ -11,11 +11,7 @@ const Cart = require("../models/cart");
 
 router.get("/:id", vendorsController.getVendor);
 
-//Does the cart route needs a query string to hold TWO different values?
-// #1 - The ID of the product that we want added to the cart
-// #2 - The ID of the vendor so that we can be redirected back to that vendor page
 router.get("/add-to-cart/:id-:vendor", function (req, res, next) {
-  // router.get("/add-to-cart", function (req, res, next) {
   console.log(req.params);
   let productId = req.params.id;
   let vendorId = req.params.vendor;

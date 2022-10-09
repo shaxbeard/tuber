@@ -4,7 +4,6 @@ body {
 }
 
 /* HOMEPAGE SECTION */
-
 .homepage header {
   z-index: 3;
   position: fixed;
@@ -102,6 +101,15 @@ a.btn.signup-button {
   margin: 15px;
 }
 
+/* VENDOR PAGE */
+h3.product-section-title {
+  margin-top: 50px;
+}
+
+span.hours-of-operation {
+  color: grey;
+}
+
 /* FOOTER SECTION */
 .footer-container {
   margin: 0 40px;
@@ -127,4 +135,12 @@ a.btn.signup-button {
 .login button:hover {
   background-color: #00a36c;
   border-color: #00a36c;
+}
+
+/* SHOPPING CART PAGE */
+.card.shopping-cart {
+  margin: 0 auto;
+}
+.card.shopping-cart button {
+  width: 100%;
 }

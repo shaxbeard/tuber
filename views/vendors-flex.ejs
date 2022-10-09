@@ -1,12 +1,12 @@
 <%- include('partials/header') -%>
   
-  <div class="container vendors-map">
-    <div class="row mt-5">
-  <div class="col-6 vendors">
+  <div class="flex-container vendors">
+
+  <div class="box1">
     <h1>Pickup Nearby</h1>
-    <ul class="row list-unstyled">
+    <ul class="vendor-cards flex-container">
       <% for(var i=0; i<vendors.length; i++) {%>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 22rem;">
           <a href="/vendor/<%= vendors[i]._id%>">
           <img class="card-img-top" src="<%= vendors[i].imagePath%>" alt="Card image cap">
           </a>
@@ -16,13 +16,12 @@
           </div>
         </div>
       <% } %>
-      </ul>   
+      </ul>     
   </div>
-  <div class="col-6 map">
-     <div class="mt-5">
+  <div class="box2 map">
+     <div>
        <img src="./imgs/map.png" />
      </div>
     </div> 
-  </div>
  </div>
 <%- include('partials/footer') -%>

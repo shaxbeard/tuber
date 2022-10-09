@@ -54,7 +54,10 @@
   <div class="row justify-content-center mt-5">
     <div>
       <h2><%= vendor.name %></h2>
-      <p><%= vendor.location %></p>
+      <span><%= vendor.location %></span>
+      <br>
+      <span class="hours-of-operation">Open Saturday and Sunday, 8am to 1pm</span>
+      <h3 class="product-section-title">Products</h3 >
       <ul class="row list-unstyled">
         <% for(var i=0; i<products.length; i++) {%>
           <%if(products[i].vendor_id.includes(String(vendor._id))){ %>
@@ -72,17 +75,10 @@
           <%}%>
         <% } %>
         </ul>  
-
       <div class="row justify-content-between"></div>
     </div>
-    <!-- <div class="col-3 mt-5">
-      <p><%= vendor.location %></p>
-    </div> -->
     <div class="col-6 mt-5">
-      <!-- <a class="btn btn-primary" href="/profile">Return to Profile</a> -->
-      <!-- <a class="btn btn-primary" href="/feed">Return to Feed</a> -->
     </div>
   </div>
 </div>
 
-<%- include('partials/footer') -%>
