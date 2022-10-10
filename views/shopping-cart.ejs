@@ -1,29 +1,43 @@
 <%- include('partials/header') -%>
 
 <ul class="list-group">
+  <!-- THIS IS THE CONDITIONAL TO CHECK IF THERE ARE ANY ITEMS IN THE CART -->
   <%if(!products){ %>
   <h2>No Items in Cart</h2>
+
+  <!-- IF THERE ARE ITEMS IN THE CART THEN SHOW THEM ALL -->
   <%} else { %>
   <div class="container">
     <div class="card shopping-cart" style="width: 18rem">
       <div class="card-body">
-        <h5 class="card-title">Order Summary</h5>
-        <% for(var i=0; i < products.length; i++) {%>
-        <span><%= products[i].qty %> </span>
-        <span><%= products[i].item.name %></span>
-        <span class="label label-success">$<%= products[i].price %></span>
-        <div>
+        <div class="card-text">
+          <h5 class="card-title">Order Summary</h5>
+
+          <!-- THIS IS THE LOOP OVER THE PRODUCTS ARRAY WHERE REPEATED ITEMS START -->
+          <% for(var i=0; i < products.length; i++) {%>
+          <div class="cart-product-details">
+            <div class="cart-group-one">
+              <span class="cart-product-quantity"><%= products[i].qty %></span>
+              <span class="cart-product-name"
+                ><%= products[i].item.name %></span
+              >
+            </div>
+            <div class="cart-product-price">$<%= products[i].price %></div>
+          </div>
           <% } %>
-          <span><strong>Subtotal</strong></span>
+          <!-- THIS IS THE END OF THE LOOP WHERE REPEATED ITEMS END -->
+
+          <!-- THIS IS THE CONDITIONAL TO CHECK IF THERE IS A SUBTOTAL VALUE -->
           <% if (totalPrice !== undefined) { %>
-          <strong>Total: $<%= totalPrice %></strong>
+          <div class="cart-product-subtotal">Subtotal: $<%= totalPrice %></div>
           <% } %>
         </div>
+
         <div>
-          <button type="button" class="btn btn-success">Checkout</button>
+          <button type="button" class="btn">Checkout</button>
         </div>
       </div>
     </div>
   </div>
-  <% } %>
 </ul>
+<% } %>

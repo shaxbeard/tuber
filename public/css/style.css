@@ -141,6 +141,10 @@ span.hours-of-operation {
 .card.shopping-cart {
   margin: 100px auto;
 }
+.cart-product-details {
+  display: flex;
+  justify-content: space-between;
+}
 .card.shopping-cart button {
   width: 100%;
   border-radius: 500px;
