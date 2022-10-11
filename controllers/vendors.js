@@ -14,8 +14,19 @@ module.exports = {
     try {
       const vendor = await Vendor.findById(req.params.id);
       const products = await Product.find().lean();
-      // console.log(vendor);
+      // console.log(
+      //   "THIS IS THE VENDOR OBJECT PASSED TO THE VANDOR.EJS PAGEXS",
+      //   vendor
+      // );
       res.render("vendor.ejs", { vendor: vendor, products: products });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  clearCart: async (req, res) => {
+    try {
+      req.session.cart = null;
+      // res.redirect(`/shopping-cart`);
     } catch (err) {
       console.log(err);
     }

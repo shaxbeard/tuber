@@ -55,10 +55,10 @@ app.use(passport.session());
 app.use(flash());
 
 //Make the sessions in this function GLOBAL - available to all of the views
-// app.use(function (req, res, next) {
-//   res.locals.session = req.session;
-//   next();
-// });
+app.use(function (req, res, next) {
+  res.locals.session = req.session;
+  next();
+});
 
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
