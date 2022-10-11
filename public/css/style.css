@@ -141,9 +141,36 @@ span.hours-of-operation {
 .card.shopping-cart {
   margin: 100px auto;
 }
-.cart-product-details {
+.shopping-cart .card-title {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 20px;
+}
+.shopping-cart .cart-product-details {
+  margin-bottom: 5px;
+}
+.shopping-cart .cart-product-name {
+  margin-left: 10px;
+}
+.shopping-cart .cart-product-details {
   display: flex;
   justify-content: space-between;
+}
+.shopping-cart .cart-product-subtotal {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid lightgrey;
+  padding-top: 20px;
+  font-weight: bold;
+}
+.shopping-cart .cart-clear {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.shopping-cart .cart-clear a {
+  color: black;
 }
 .card.shopping-cart button {
   width: 100%;
