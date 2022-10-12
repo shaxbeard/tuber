@@ -25,16 +25,18 @@
             <div class="cart-product-price">$<%= products[i].price %></div>
           </div>
           <% } %>
-          <!-- THIS IS THE END OF THE LOOP WHERE REPEATED ITEMS END -->
 
           <!-- THIS IS THE CONDITIONAL TO CHECK IF THERE IS A SUBTOTAL VALUE -->
           <% if (totalPrice !== undefined) { %>
-          <div class="cart-product-subtotal">Subtotal: $<%= totalPrice %></div>
+          <div class="cart-product-subtotal">
+            <div class="subtotal-text">Subtotal:</div>
+            <div class="subtotal-price">$<%= totalPrice %></div>
+          </div>
           <% } %>
         </div>
-        <div>VendorID: <%= vendorId %></div>
-        <a href="/clear-cart">Clear Cart</a>
-
+        <div class="cart-clear">
+          <a href="/clear-cart">Clear Cart</a>
+        </div>
         <div>
           <button type="button" class="btn">Checkout</button>
         </div>
