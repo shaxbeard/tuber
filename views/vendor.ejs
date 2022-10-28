@@ -42,12 +42,12 @@
           </form>
         </div>
       </div>
-      <div class="right-nav-controls">
-       
-        <a type="button" class="btn signup-button" href="/shopping-cart"><i class="fa fa-shopping-cart"></i>Cart
-         
-        </a>
-        
+      <div class="right-nav-controls">    
+        <a type="button" class="btn signup-button" href="/shopping-cart">
+          <i class="fa fa-shopping-cart"></i> Cart <%if (session.cart?.totalQty) { %>
+          <%= session.cart.totalQty %>
+          <%}%>      
+        </a>     
       </div>
     </nav>
 <div class="container">
@@ -63,7 +63,6 @@
           <%if(products[i].vendor_id.includes(String(vendor._id))){ %>
             <div class="card" style="width: 18rem;">
               <a href="/vendor/add-to-cart/<%= products[i]._id%>-<%= String(vendor._id)%>">
-              <!-- <a href="/vendor/add-to-cart?id=<%= products[i]._id%>"> -->
             <img class="card-img-top" src="<%= products[i].imagePath%>" alt="Card image cap">
             </a>
             <div class="card-body">
