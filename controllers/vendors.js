@@ -1,5 +1,6 @@
 const Vendor = require("../models/Vendor");
 const Product = require("../models/Product");
+const Cart = require("../models/cart");
 
 module.exports = {
   getVendors: async (req, res) => {
@@ -26,7 +27,22 @@ module.exports = {
   clearCart: async (req, res) => {
     try {
       req.session.cart = null;
-      // res.redirect(`/shopping-cart`);
+      res.redirect(`/vendors`);
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  getCart: async (req, res) => {
+    try {
+      if (!req.session.cart) {
+        return res.render("shopping-cart.ejs", { products: null });
+      }
+      let cart = new Cart(req.session.cart);
+      res.render("shopping-cart.ejs", {
+        products: cart.generateArray(),
+        totalPrice: cart.totalPrice,
+        vendorId: cart.vendorId,
+      });
     } catch (err) {
       console.log(err);
     }

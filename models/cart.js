@@ -1,6 +1,4 @@
 module.exports = function Cart(oldCart) {
-  //Wait - I also need to store the Vendor ID in the cart somewhere too
-  //Max's demo was for a single vendor - so he didn't need to have a vendor ID anywhere
   this.items = oldCart.items || {};
   this.totalQty = oldCart.totalQty || 0;
   this.totalPrice = oldCart.totalPrice || 0;

@@ -5,10 +5,6 @@ const vendorsController = require("../controllers/vendors");
 const Product = require("../models/Product");
 const Cart = require("../models/cart");
 
-//In the future maybe add routes for the vendors to do their own admin
-// /createVendor
-// /deleteVendor
-
 router.get("/:id", vendorsController.getVendor);
 
 router.get("/add-to-cart/:id-:vendor", function (req, res, next) {
