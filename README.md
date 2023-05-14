@@ -4,17 +4,19 @@
 
 ---
 
-# Things to add
+# Project Description
 
-- Create a `.env` file in config folder and add the following as `key = value`
-  - PORT = 2121 (can be any port example: 3000)
-  - DB_STRING = `your database URI`
-  - CLOUD_NAME = `your cloudinary cloud name`
-  - API_KEY = `your cloudinary api key`
-  - API_SECRET = `your cloudinary api secret`
+- A basic full-stack application using
+  - Express.js for the server
+  - Passport.js for authentication
+  - EJS for html templating
+  - MongoDB and Mongoose for the database
 
+# Future Plans
+
+This project is just in the beginning phase and has limited functionality. Future plans include:
+  - Adding React on the front end 
+  - Completing the checkout process
+  - Building local maps with the Google Maps API
 ---
 
-# Run
-
-`npm start`
